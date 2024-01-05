@@ -822,11 +822,11 @@ class MemberEventService extends BaseService
                 $surplusSectionDynamicCourse += $item1['course']-$item1['course_used'];
             }
             $totalSectionCourse = $item['course1']+$item['course2']+$item['course3']+$item['currency_course'];
-            $surplusSectionCourse = $totalSectionCourse-$item['course1_used']+$item['course2_used']+$item['course3_used']+$item['currency_course_used'];
+            $surplusSectionCourse = $totalSectionCourse-$item['course1_used']-$item['course2_used']-$item['course3_used']-$item['currency_course_used'];
             $surplusSectionCourse += $surplusSectionDynamicCourse;
             $totalSectionCourse += $totalSectionDynamicCourse;
 
-            
+           
 
             if ($item['expire_at'] === VipCardConstant::DEFAULT_EXPIRE_AT) {
                 $statusText = '未开始使用';
