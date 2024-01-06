@@ -34,3 +34,10 @@ $ php bin/hyperf.php start
 This will start the cli-server on port `9501`, and bind it to all network interfaces. You can then visit the site at `http://localhost:9501/`
 
 which will bring up Hyperf default home page.
+
+
+## 部署说明
+1. 进入项目目录
+2. 拉取代码到服务器本地
+3. echo yes | composer dump-autoload -o
+4. supervisorctl reload
